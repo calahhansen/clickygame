@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Card from './components/cards';
-import cardsJSON from './cards.json';
+import Cards from './cards.js';
 import Wrapper from './components/wrapper'
 import Jumbo from './components/Jumbo';
 import Nav from './components/Nav';
@@ -10,7 +10,7 @@ import Nav from './components/Nav';
 export default function App() {
   const [score, setScore] = useState(0);
   const [topscore, setTopscore] = useState(1);
-  const [cards, setCards] = useState(cardsJSON);
+  const [cards, setCards] = useState(Cards);
   return (
     <Wrapper>
       <Nav>
@@ -33,7 +33,7 @@ export default function App() {
           removeCard={(id) => setCards(cards.filter(card => card.id !== id))}
           id={card.id}
           key={card.id}
-          image={card.image}
+          img={card.image}
         />
       ))}
     </Wrapper>

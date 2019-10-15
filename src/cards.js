@@ -1,7 +1,8 @@
+const Cards = 
 [
     {
       "id": 1,
-      "image": "../public/images/1.PNG"
+        "url": "../public/images/1.PNG"
     },
     {
         "id": 2,
@@ -63,6 +64,7 @@
         "id": 16,
         "image":"../public/images/16.PNG"
     }
-]
+];
+
+export default Cards;
     
-  
