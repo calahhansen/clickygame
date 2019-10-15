@@ -7,7 +7,7 @@ function Card(props) {
         //   <div role="img" aria-label="click item" className="click-item shake"></div>
         <div className="card">
             <div className="img-container">
-                <img src={require(props.url)} alt={props.id}/>
+                <img src={props.url} alt={props.id}/>
             </div>
             <span onClick={() => props.removeCard(props.id)} className="remove">
                 𝘅

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Card from './components/cards';
-import Cards from './cards.js';
+import Cards from './components/images';
 import Wrapper from './components/wrapper'
 import Jumbo from './components/Jumbo';
 import Nav from './components/Nav';
@@ -30,10 +30,10 @@ export default function App() {
       </Jumbo>
       {cards.map(card => (
         <Card
-          removeCard={(id) => setCards(cards.filter(card => card.id !== id))}
-          id={card.id}
-          key={card.id}
-          img={card.image}
+          removeCard={(id) => setCards(cards.filter(card => Cards.id !== id))}
+          id={Cards.id}
+          key={Cards.id}
+          img={Cards.image}
         />
       ))}
     </Wrapper>
