@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Card from './components/cards';
-import cards from './cards.json';
+import './cards.json';
 import Wrapper from './components/wrapper'
 import Jumbo from './components/Jumbo';
 import Nav from './components/Nav';
@@ -11,6 +10,7 @@ import Nav from './components/Nav';
 export default function App() {
   const [score, setScore] = useState(0);
   const [topscore, setTopscore] = useState(1);
+  const [cards, setCards] = useState(cards);
   return (
     <Wrapper>
       <Nav>
