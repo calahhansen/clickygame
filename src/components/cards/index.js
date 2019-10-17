@@ -9,15 +9,13 @@ function Card(props) {
         <div className="card">
             <div className="img-container" role="img" style={{backgroundImage: `url("${props.img}")`}}>
 
-                {/* <img src={props.url} alt={props.id}/> */}
+                <img src={props.img} alt={props.id}/>
             </div>
-            <span onClick={() => props.removeCard(props.id)} className="remove">
+            <span onClick={() => props.removeCard(props.isClicked)} className="remove">
                 𝘅
        </span>
        
         </div>
-
-        {JSON.stringify(props.img)}
 
         </>
     );

@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 
 
 export default function App() {
+  console.log(cardsJSON);
   const [score, setScore] = useState(0);
   const [topscore, setTopscore] = useState(1);
   const [cards, setCards] = useState(cardsJSON);
@@ -31,10 +32,14 @@ export default function App() {
       
       {cards.map(card => (
         <Card
-          removeCard={(id) => setCards(cards.filter(card => cardsJSON.id !== id))}
-          id={cardsJSON.id}
-          key={cardsJSON.id}
-          img={cardsJSON.image}
+          removeCard={(isClicked) => {
+            console.log(isClicked);
+            // if clicked is equal to False - change isClicked to True, add 1 point to score and shuffle blocks else if isClicked is equal to True than "you lose"
+          }}
+          id={card.id}
+          key={card.id}
+          img={card.image}
+          isClicked={card.isClicked}
         />
       ))}
     </Wrapper>
